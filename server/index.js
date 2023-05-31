@@ -8,12 +8,13 @@ import postRoutes from './routes/posts.js'
 
 const app = express()
 
-// middlewares
-app.use('/posts', postRoutes)
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }))
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }))
 app.use(cors())
+
+// middlewares
+app.use('/posts', postRoutes)
 
 const CONNECTION_URL = 'mongodb+srv://prabhashbhajani:Prabhash@socialmedia.smobvd1.mongodb.net/?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000
