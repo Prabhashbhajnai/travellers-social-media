@@ -16,7 +16,7 @@ app.use(cors())
 // middlewares
 app.use('/posts', postRoutes)
 
-const CONNECTION_URL = 'mongodb+srv://prabhashbhajani:Prabhash@socialmedia.smobvd1.mongodb.net/?retryWrites=true&w=majority'
+const CONNECTION_URL = 'mongodb+srv://prabhashbhajani:Prabhash@socialmedia.smobvd1.mongodb.net/socialmedia?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000
 
 mongoose.connect(
